@@ -11,22 +11,23 @@
   <body>
    <p class="notice"><%= notice %></p>
    <p class="alert"><%= alert %></p>
-   <%= link_to "home", root_path%>
-   <% if user_signed_in?%>
+    <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo right"><%= link_to "posts", posts_path%></a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li> <%= link_to " <i class='material-icons'>add</i>".html_safe, root_path%></li>
+        <% if user_signed_in?%>
 
+        <li> <%= link_to "logout", destroy_user_session_path, method: :delete%></li>
+        <li><  <%= link_to "settings", edit_user_registration_path %></li>
+        <% else %>
+        <li> <%= link_to "login", new_user_session_path %></li>
+        <li> <%= link_to "signup", new_user_registration_path %></li>
+        <%end%>
 
-
-    <%= link_to "logout", destroy_user_session_path, method: :delete%>
-    <%= link_to "settings", edit_user_registration_path %>
-     <% else %>
-
-
-
-    <%= link_to "login", new_user_session_path %>
-    <%= link_to "signup", new_user_registration_path %>
-
-    <%end%>
-    <%= link_to "posts", posts_path%>
-    <%= yield %>
+      </ul>
+    </div>
+  </nav>
+     <%= yield %>
   </body>
 </html>
