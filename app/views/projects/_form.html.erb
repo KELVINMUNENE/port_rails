@@ -12,6 +12,15 @@
   <% end %>
 
   <div class="actions">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+    <%= form.label :picture %>
+    <%= form.file_field :picture %>
+    <%= form.label :link %>
+    <%= form.text_field :link %>
+  
     <%= form.submit %>
   </div>
 <% end %>
+
+
