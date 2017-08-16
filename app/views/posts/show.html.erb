@@ -3,6 +3,13 @@
 <div class="description">
   <%= @post.description %>
 </div>
+<ul>
+	<% @post.comments.each do |comment|%>
+	<li>
+		<%= comment.description%>
+	</li>
+<%end%>
+</ul>
 
 <%= link_to 'New comment', new_post_comment_path(@post)%>
 <%= link_to 'Edit', edit_post_path(@post) %> |
