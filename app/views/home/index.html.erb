@@ -1,7 +1,17 @@
-<h1>Kelvin munene</h1>
+<% if user_signed_in?%>
+
+
+
+<%= link_to "logout", destroy_user_session_path, method: :delete%>
+<%= link_to "settings", edit_user_registration_path %>
+ <% else %>
+
+
+
 <%= link_to "login", new_user_session_path %>
 <%= link_to "signup", new_user_registration_path %>
-<%= link_to "logout", destroy_user_session_path %>
-<%= link_to "settings", edit_user_registration_path %>
 
-
+<%end%>
+<h1>Kelvin munene</h1>
+<%= link_to "Skills",skills_path%>
+<%= link_to "Projects", projects_path%>
