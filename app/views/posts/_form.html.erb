@@ -11,7 +11,20 @@
     </div>
   <% end %>
 
-  <div class="actions">
+  <div class="input-field">
+ 
+    <%= form.text_field :title %>
+     <%= form.label :title %>
+    </div>
+    <div class="input-field">
+    <%= form.text_area :description,class:"materialize-textarea" %>
+    <%= form.label :description %>
+    </div>
+<div>
     <%= form.submit %>
   </div>
 <% end %>
+
+
+
+
