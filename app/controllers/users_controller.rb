@@ -10,8 +10,8 @@ class UsersController < ApplicationController
 		def create
 			@user = User.find(params[:user])
 			if @user.save
-				UserMail.signup_confirmation(@user).deliver
-				redirect_to @user, notice: "signed up successful"
+				UserMailer.signup_confirmation(@user).deliver
+				redirect_to @user, notice: "signed up successfully."
 			else 
 				render :new
 			end
