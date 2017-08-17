@@ -32,6 +32,15 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settinga = {
+    address : "karvinmitchar@gmail.com",
+    port : 587,
+    domain : "gmail.com",
+    authentication : "plain",
+    enable_starttls_auto: true,
+    User_name: ENV["GMAIL_USERNAME"]
+    Password: ENV["GMAIL_PASSWORD"]
+  }
 
   config.action_mailer.perform_caching = false
 
