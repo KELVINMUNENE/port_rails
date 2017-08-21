@@ -28,8 +28,8 @@ class RecommendationsController < ApplicationController
 
     respond_to do |format|
       if @recommendation.save
-        format.html { redirect_to @recommendation, notice: 'Recommendation was successfully created.' }
-        format.json { render :show, status: :created, location: @recommendation }
+        format.html { redirect_to recommendations_path, notice: 'Recommendation was successfully created.' }
+        format.json { render :index, status: :created, location: @recommendation }
       else
         format.html { render :new }
         format.json { render json: @recommendation.errors, status: :unprocessable_entity }
