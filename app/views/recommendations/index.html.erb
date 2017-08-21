@@ -14,6 +14,7 @@
       <tr>
         <td><%= recommendation.recommendation %></td>
         <td><%= link_to 'Show', recommendation %></td>
+        <% if user_signed_in? && current_user.admin%>
         <td><%= link_to 'Edit', edit_recommendation_path(recommendation) %></td>
         <td><%= link_to 'Destroy', recommendation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -22,7 +23,8 @@
 </table>
 
 <br>
-
+<% if user_signed_in? && current_user.admin%>
 <%= link_to 'New Recommendation', new_recommendation_path %>
+<% end %>
 
 
