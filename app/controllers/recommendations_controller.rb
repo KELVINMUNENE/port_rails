@@ -69,6 +69,6 @@ class RecommendationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def recommendation_params
-      params.fetch(:recommendation, {})
+      params.fetch(:recommendation).permit(:recommendation) 
     end
 end
