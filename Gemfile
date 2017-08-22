@@ -16,6 +16,7 @@ end
 
 group :development do
 gem 'sqlite3'
+gem 'ajaxify_rails'
 end
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
