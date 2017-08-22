@@ -69,6 +69,7 @@ class AboutsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def about_params
-      params.fetch(:about, {})
+      params.fetch(:about).permit(:description)
     end
 end
+ 
