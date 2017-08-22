@@ -16,6 +16,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require materialize
+
   $(document).ready(function(){
     $('.collapsible').collapsible();
   });

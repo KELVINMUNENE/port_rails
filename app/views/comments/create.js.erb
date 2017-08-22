@@ -1,2 +1,1 @@
-$('#comments').html("<%= j (render @comments) %>");
-$('#comment-form').slideUp(350);
+$('#new_task_link').hide().after('<%= j render("form") %>')
