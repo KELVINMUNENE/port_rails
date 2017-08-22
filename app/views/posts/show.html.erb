@@ -6,7 +6,7 @@
 <ul>
 	<% @post.comments.each do |comment|%>
 	<li>
-		<%= comment.description%> by <%= comment.user.email%>
+		<%= comment.description%> by <%= comment.user.email%><%= comment.created_at %>
 	</li>
 <%end%>
 </ul>
