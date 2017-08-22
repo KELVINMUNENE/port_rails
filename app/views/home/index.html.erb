@@ -5,15 +5,15 @@
 
   <ul class="collapsible popout" data-collapsible="accordion">
 <li>
-      <div class="collapsible-header"><%= link_to "Skills",skills_path%></div>
-      <div class="collapsible-body"><span><%= link_to "Skills",skills_path%></span></div>
+      <div class="collapsible-header"><%= link_to "Skills",skills_path, id: "new_punch", remote: true%></div>
+      <div class="collapsible-body"><span><%= link_to "All skills",skills_path%></span></div>
     </li>
     </ul>
 
     <ul class="collapsible popout" data-collapsible="accordion">
     <li>
       <div class="collapsible-header"><%= link_to "Projects", projects_path%></div>
-      <div class="collapsible-body"><span><%= link_to "Projects", projects_path%></span></div>
+      <div class="collapsible-body"><span><%= link_to "My projects", projects_path%></span></div>
     </li>
     </ul>
 
