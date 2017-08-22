@@ -13,14 +13,17 @@
     <% @abouts.each do |about| %>
       <tr>
        <td><%= link_to about.description, about %></td>
-        
+        <% if user_signed_in? && current_user.admin%>
         <td><%= link_to 'Edit', edit_about_path(about) %></td>
         <td><%= link_to 'Destroy', about, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end%>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
+<% if user_signed_in? && current_user.admin%>
 
 <%= link_to 'New About', new_about_path %>
+<% end%>
