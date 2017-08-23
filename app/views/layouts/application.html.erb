@@ -11,13 +11,16 @@
   <body>
    <p class="notice"><%= notice %></p>
    <p class="alert"><%= alert %></p>
-    <nav>
-    <div class="nav-wrapper" id ="navnav">
-      <a href="#" class="brand-logo right"><%= link_to "posts", posts_path%></a>
-      <a href="#" class="brand-logo right"><%= link_to "recommendations", recommendations_path %></a>
-      <ul id="nav-mobile" class="left hide-on-med-and-down">
+   <nav>
+    <div class="nav-wrapper" id="navnav">
+      <a href="#" class="navnav">Kelvin Munene</a>
+
+      
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><%= link_to "<i class='material-icons'>home</i>".html_safe, root_path%></li>
-         <li><%= link_to "recommendations", recommendations_path %></li>
+         <li><%= link_to "RECOMMENDATIONS", recommendations_path %></li>
+         <li><%= link_to "POSTS", posts_path%></li>
+      
 
         <% if user_signed_in?%>
 
