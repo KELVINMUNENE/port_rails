@@ -1,14 +1,72 @@
+  <div class="magnolia">
   <ul class="collapsible popout" data-collapsible="accordion">
 <li>
     <div class="collapsible-header"><%= "About me"%></div>
-      <div class="collapsible-body"><span><%= link_to "Want to know me?",abouts_path%></span></div>
+      <div class="collapsible-body"><span> 
+<% @abouts.each do |about| %>
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Early Childhood</span>
+              <p>I was Born in 24th June 1996</p>
+               <p>Raised in umoja Innercore,Nairobi,Kenya</p>
+              
+            </div>
+            
+          </div>
+        </div>
+      </div>
+<div class="row">
+        <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">School</span>
+              <p>I attended Simba Day nursery School</p>
+               <p>Joined Busara Primary School where i finished my school and attained an A-</p>
+                <p>I later joined Ikuu boys High School where i finshed my O levels</p>
+                <p>Later i joined KCA university in Nairobi where i studied Business and commerce for a year and a half</p>
+              
+            </div>
+            
+          </div>
+        </div>
+      </div>
+<div class="row">
+        <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Interests</span>
+              <p><%= about.description %></p>
+              
+            </div>
+            
+          </div>
+        </div>
+      </div>
+<% end %>
+      </span></div>
     </li>
     </ul>
 
   <ul class="collapsible popout" data-collapsible="accordion">
 	<li>
      <div class="collapsible-header"><%= "Skills"%></div>
-      <div class="collapsible-body"><span><%= link_to "All skills",skills_path%></span></div>
+      <div class="collapsible-body"><span>
+      <% @skills.each do |skill| %> 
+       <div class="row">
+        <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title"><%= skill.name %></span>
+              <p><%= skill.description %></p>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+<% end %>
+      </span></div>
     </li>
     </ul>
   
@@ -16,37 +74,26 @@
   <ul class="collapsible popout" data-collapsible="accordion">
 <li>
     <div class="collapsible-header"><%= "Projects"%></div>
-      <div class="collapsible-body"><span><%= link_to "my projects",projects_path%></span></div>
+      <div class="collapsible-body"><span>      <% @projects.each do |project| %>
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title"><%= project.name %></span>
+              <p><%= project.description %></p>
+              
+            </div>
+            <div class="card-action">
+              <a href="#">Launch app</a>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+      <% end %>
+      </span</span></div>
     </li>
     </ul>
-
-
-
-
-
-
-
-
-
-
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -102,7 +149,7 @@
 
 	<li><a class="grey-text text-lighten-3" href="https://github.com/KELVINMUNENE">Github</a></li>
 <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/kelvin-munene-8a6bb0146/">Linkedin</a></li>
-	
+	<li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/kelvin-munene-8a6bb0146/">Twitter</a></li>
 	</ul>
 	</div>
 	</div>
@@ -110,7 +157,7 @@
 	<div class="footer-copyright">
 	<div class="container">
 	© portfolio
-	<a class="grey-text text-lighten-4 right" href="https://github.com/KELVINMUNENE/port_rails">Created by Kelvinmunene</a>
+	<a class="grey-text text-lighten-4 right" href="https://twitter.com/MitcharKarvin">Created by Kelvinmunene</a>
 	</div>
 	</div>
 </footer>
