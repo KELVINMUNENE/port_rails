@@ -1,14 +1,14 @@
   <div class="magnolia">
   <ul class="collapsible popout" data-collapsible="accordion">
 <li>
-    <div class="collapsible-header"><%= "About me"%></div>
+    <div class="collapsible-header"><i class="material-icons">person_outline</i><%= "About me"%></div>
       <div class="collapsible-body"><span> 
 <% @abouts.each do |about| %>
       <div class="row">
         <div class="col s12 m6">
           <div class="card blue-grey darken-1">
             <div class="card-content white-text">
-              <span class="card-title">Early Childhood</span>
+              <span class="card-title"><i class="material-icons">child_care</i>Early Childhood</span>
               <p>I was Born in 24th June 1996</p>
                <p>Raised in umoja Innercore,Nairobi,Kenya</p>
               
@@ -21,7 +21,8 @@
         <div class="col s12 m6">
           <div class="card blue-grey darken-1">
             <div class="card-content white-text">
-              <span class="card-title">School</span>
+              <span class="card-title"><i class="material-icons">school</i>School</span>
+
               <p>I attended Simba Day nursery School</p>
                <p>Joined Busara Primary School where i finished my school and attained an A-</p>
                 <p>I later joined Ikuu boys High School where i finshed my O levels</p>
@@ -36,7 +37,7 @@
         <div class="col s12 m6">
           <div class="card blue-grey darken-1">
             <div class="card-content white-text">
-              <span class="card-title">Interests</span>
+              <span class="card-title"><i class="material-icons">favorite</i>Interests</span>
               <p><%= about.description %></p>
               
             </div>
@@ -51,7 +52,7 @@
 
   <ul class="collapsible popout" data-collapsible="accordion">
 	<li>
-     <div class="collapsible-header"><%= "Skills"%></div>
+     <div class="collapsible-header"><i class="material-icons">build</i><%= "Skills"%></div>
       <div class="collapsible-body"><span>
       <% @skills.each do |skill| %> 
        <div class="row">
@@ -73,7 +74,7 @@
 
   <ul class="collapsible popout" data-collapsible="accordion">
 <li>
-    <div class="collapsible-header"><%= "Projects"%></div>
+    <div class="collapsible-header"><i class="material-icons">computer</i><%= "Projects"%></div>
       <div class="collapsible-body"><span>      <% @projects.each do |project| %>
       <div class="row">
         <div class="col s12 m6">
